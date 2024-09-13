@@ -1,12 +1,11 @@
 from fastapi import FastAPI
 import uvicorn
-from services.screaping_service import get_data
+from services.screaping_service import get_data, process_news_urls
 app = FastAPI()
 
 @app.get('/')
 def root():
-    get_data()
-    return {"Hola mundo"}
+    return process_news_urls(get_data())
 
 
 if __name__ == "__main__":
