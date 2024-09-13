@@ -2,9 +2,6 @@ import requests
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urlparse
 
-# URL principal para realizar el scraping
-url = "https://www.noticiasformosa.com.ar/"
-
 # Lista de dominios que quieres excluir
 excluded_domains = ['facebook.com', 'instagram.com', 'twitter.com', 'youtube.com']
 
@@ -17,7 +14,8 @@ def es_url_de_noticias(url):
     # Verifica si la URL contiene '/2024/' o '/category/' para identificar noticias
     return '/2024/' in parsed_url.path or '/category/' in parsed_url.path
 
-def get_data():
+def get_data(url):
+    print(url)
     try:
         # Realizar la solicitud HTTP
         res = requests.get(url, verify=False)

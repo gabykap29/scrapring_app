@@ -4,7 +4,7 @@ import cors from 'cors';
 import { PORT } from '../config/config.js';
 import { connectDb } from '../db/db.js';
 import routerUrls from '../routes/url.routes.js';
-import routerScraping from '../routes/scraping.routes.js'
+import routerScraping from '../routes/scraping.routes.js';
 
 
 class Server{
