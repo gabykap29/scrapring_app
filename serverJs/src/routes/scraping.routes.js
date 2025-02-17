@@ -6,5 +6,6 @@ const router = Router();
 const scrapingCtrl = new ScrapingCtrl();
 
 router.get('/scraping',scrapingCtrl.processUrls.bind(scrapingCtrl));
+router.post('/scrapingOne',scrapingCtrl.findOneUrl.bind(scrapingCtrl));
 
 export default router;
