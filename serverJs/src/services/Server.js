@@ -10,7 +10,7 @@ import routerScraping from '../routes/scraping.routes.js';
 class Server{
     constructor(){
         this.app = express();
-        this.port = PORT || 4000;
+        this.port = PORT || 3002;
         this.dbConnect();
         this.middlewares();
         this.routes()
@@ -28,7 +28,7 @@ class Server{
         this.app.use('/api/',routerScraping);
     }
     listen(){
-        this.app.listen(this.port,()=> {
+        this.app.listen(this.port,"0.0.0.0",()=> {
             console.log("Servidor funcionando en el puerto " + this.port);            
         })
     }

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
     try {
-        const res = await fetch("http://localhost:4000/api/scraping", {
+        const res = await fetch("http://10.0.37.208:3002/api/scraping", {
             method: "GET",
         });
 
