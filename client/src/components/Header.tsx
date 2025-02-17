@@ -5,7 +5,7 @@ const Header = () => {
     <div
       className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom text-white"
       style={{
-        background: "linear-gradient(90deg, #343a40, #495057)",
+        background: "linear-gradient(180deg, #1c1e22, #343a40)",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
       }}
     >
@@ -15,12 +15,12 @@ const Header = () => {
       {/* Botones de navegación */}
       <div className="btn-toolbar mb-2 mb-md-0">
         <div className="btn-group me-3">
-          <Link href={'/pages/home'}>
+          <Link href={'/'}>
             <button type="button" className="btn btn-sm btn-outline-light" style={{ marginRight: "10px" }}>
               Obtener Noticias
             </button>
           </Link>
-          <Link href={'/pages/repairs'}>
+          <Link href={'/pages/urls'}>
             <button type="button" className="btn btn-sm btn-outline-light" style={{ marginRight: "10px" }}>
               Urls
             </button>
